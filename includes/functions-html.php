@@ -7,6 +7,7 @@
  */
 function yourls_html_logo() {
     yourls_do_action( 'pre_html_logo' );
+    yourls_do_action( 'shell_before_logo' );
     ?>
     <header role="banner">
     <h1>
@@ -186,7 +187,7 @@ function yourls_html_addnew( $url = '', $keyword = '' ) {
         return $pre;
     }
     ?>
-    <main role="main">
+    <section role="region" class="yourls-addnew">
     <div id="new_url">
         <div>
             <form id="new_url_form" action="" method="get">
@@ -203,6 +204,7 @@ function yourls_html_addnew( $url = '', $keyword = '' ) {
         </div>
         <?php yourls_do_action( 'html_addnew' ); ?>
     </div>
+    </section>
     <?php
 }
 
