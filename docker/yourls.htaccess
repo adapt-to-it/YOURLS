@@ -1,0 +1,10 @@
+# YOURLS rewrite rules (mounted into the container at /var/www/html/.htaccess)
+# Mirrors what YOURLS auto-generates on a normal install.
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /yourls-loader.php [L]
+</IfModule>
