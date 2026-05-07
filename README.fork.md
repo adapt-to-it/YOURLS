@@ -68,9 +68,26 @@ and columns) but a backup is the standard precaution.
 - PHP **8.1+**
 - MySQL **5.7+** or MariaDB **10.2+** (JSON column support is required for
   the v510 `meta` field)
-- The dependencies in `includes/vendor/` ship with the repo. No `composer
-  install` required on the production host. The compiled CSS/JS bundle
-  in `ui/assets/dist/` also ships with the repo.
+- The runtime dependencies in `includes/vendor/` ship with the repo
+  (production-only, no dev deps). No `composer install` required on the
+  production host. The compiled CSS/JS bundle in `ui/assets/dist/` also
+  ships with the repo.
+
+### Re-installing vendor for development
+
+If you ever need to re-run composer locally (e.g. you bumped a dependency
+in `composer.json`), use the right flag for your target:
+
+```bash
+# Production install — what ships in the repo
+composer install --no-dev
+
+# Development install — adds PHPUnit and friends, lets you run the tests
+composer install
+```
+
+The repo ships in `--no-dev` shape so the production zip stays small.
+PHPUnit is pulled in only when you re-install with dev deps locally.
 
 ## Configuration
 
