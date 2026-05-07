@@ -6,6 +6,13 @@
 
 > Your Own URL Shortener
 
+> [!NOTE]
+> You're looking at the **`adapt-to-it/YOURLS` fork**. It adds a Blade
+> admin UI, DB-backed multi-user auth, and async click tracking with rich
+> per-link analytics on top of upstream. See **[README.fork.md](README.fork.md)**
+> for what changed and how to install. The original upstream README
+> follows below.
+
 [![CI](https://github.com/YOURLS/YOURLS/actions/workflows/ci.yml/badge.svg)](https://github.com/YOURLS/YOURLS/actions/workflows/ci.yml) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/YOURLS/YOURLS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/YOURLS/YOURLS/?branch=master) ![PHP Version Support](https://img.shields.io/packagist/php-v/yourls/yourls) [![Packagist](https://img.shields.io/packagist/v/yourls/yourls.svg)](https://packagist.org/packages/yourls/yourls) [![OpenCollective](https://opencollective.com/yourls/backers/badge.svg)](https://opencollective.com/yourls#contributors) 
 [![OpenCollective](https://opencollective.com/yourls/sponsors/badge.svg)](#sponsors)
 
